@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.card-historical {
+    background-color: #f7f2e8;
+    background-image: radial-gradient(#e3cdab 0.75px, transparent 0.75px), radial-gradient(#e3cdab 0.75px, #f7f2e8 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 15px rgba(217, 119, 6, 0.2);
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos de Impressão */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .card-historical {
+        background: white !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    .print-border {
+        border: 1px solid #cbd5e1 !important;
+    }
+}
